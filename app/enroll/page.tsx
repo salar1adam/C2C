@@ -202,9 +202,9 @@ export default function EnrollPage() {
                 <CardContent className="pt-6">
                   <h3 className="font-medium mb-4">Graduate Success Stories</h3>
                   <div className="space-y-4">
-                    <div className="flex items-center gap-4 mb-4">
+                    <div className="flex items-center gap-4 mb-4">git apply
                       <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                        <Image src="/images/testimonial-john.png" alt="John Davis" fill className="object-cover" />
+                        <Image src="/john.jpg" alt="John Davis" fill className="object-cover" />
                       </div>
                       <div>
                         <h4 className="font-bold">John Davis</h4>
@@ -218,8 +218,8 @@ export default function EnrollPage() {
                   </div>
                   <div className="mt-4 pt-4 border-t border-slate-100">
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                        <Image src="/images/testimonial-maria.png" alt="Maria Sanchez" fill className="object-cover" />
+                      <div className="relative w-12 h-12 rounded-full overflow-hidden">git apply
+                        <Image src="/maria.jpg" alt="Maria Sanchez" fill className="object-cover" />
                       </div>
                       <div>
                         <h4 className="font-bold">Maria Sanchez</h4>

@@ -36,9 +36,9 @@ export default function CurriculumPage() {
                 </Button>
               </div>
             </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
+            <div className="relative rounded-lg overflow-hidden pt-[66.67%]">
               <Image
-                src="/placeholder.svg?height=250&width=500"
+                src="/circuleom.png"
                 alt="Course curriculum overview"
                 fill
                 className="object-cover"

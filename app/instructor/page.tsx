@@ -22,7 +22,7 @@ export default function InstructorPage() {
             <div className="md:col-span-1">
               <div className="relative h-[350px] rounded-lg overflow-hidden mb-4">
                 <Image
-                  src="/placeholder.svg?height=350&width=350"
+                  src="/IMG_5500.PNG"
                   alt="Salar Mousa Adam"
                   fill
                   className="object-cover"

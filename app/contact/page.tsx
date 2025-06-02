@@ -99,8 +99,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-medium">Phone</h3>
-                    <p className="text-slate-600">Main: (555) 123-4567</p>
-                    <p className="text-slate-600">Admissions: (555) 987-6543</p>
+                    <p className="text-slate-600">Main: (964) 750-6416103</p>
+                    <p className="text-slate-600">Admissions: (964) 750-6416103</p>
                   </div>
                 </div>
 

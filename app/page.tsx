@@ -11,13 +11,13 @@ export default function Home() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container px-6 md:px-8 max-w-7xl mx-auto flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <Image
-              src="/placeholder.svg?height=40&width=40"
+ <Image
+ src="/logo.svg"
               alt="Core to Crust Logo"
               width={40}
               height={40}
-              className="rounded-md"
-            />
+
+ />
             <span className="text-xl font-bold">Core to Crust</span>
           </div>
           <nav className="hidden md:flex gap-6">
@@ -91,7 +91,7 @@ export default function Home() {
               </div>
               <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden">
                 <Image
-                  src="/images/oil-rig-platform.png"
+                  src="/ChatGPT Image Jun 1, 2025, 09_41_43 PM.png"
                   alt="Oil rig platform"
                   fill
                   className="object-cover rounded-lg"
@@ -100,7 +100,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] opacity-20 bg-cover bg-center"></div>
+          <div className="absolute inset-0 bg-[url('/images/oil-rig-platform.png')] opacity-20 bg-cover bg-center"></div>
         </section>
 
         {/* Stats Section */}
@@ -366,10 +366,10 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative h-[400px] rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=400&width=400"
-                  alt="Salar Mousa Adam"
+ src="/IMG_5500.PNG"
+ alt="Salar Mousa Adam teaching"
                   fill
-                  className="object-cover"
+ className="object-contain"
                 />
               </div>
               <div className="space-y-6">
@@ -430,7 +430,7 @@ export default function Home() {
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                      <Image src="/images/testimonial-sarah.png" alt="Sarah Johnson" fill className="object-cover" />
+                      <Image src="/sarah.jpg" alt="Sarah Johnson" fill className="object-cover" />
                     </div>
                     <div>
                       <h4 className="font-bold">Sarah Johnson</h4>
@@ -448,7 +448,7 @@ export default function Home() {
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                      <Image src="/images/testimonial-michael.png" alt="Michael Chen" fill className="object-cover" />
+                      <Image src="/michael.jpg" alt="Michael Chen" fill className="object-cover" />
                     </div>
                     <div>
                       <h4 className="font-bold">Michael Chen</h4>
@@ -466,7 +466,7 @@ export default function Home() {
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                      <Image src="/images/testimonial-elena.png" alt="Elena Rodriguez" fill className="object-cover" />
+                      <Image src="/elena.jpg" alt="Elena Rodriguez" fill className="object-cover" />
                     </div>
                     <div>
                       <h4 className="font-bold">Elena Rodriguez</h4>
@@ -853,34 +853,30 @@ export default function Home() {
                     Instructor
                   </Link>
                 </li>
-                <li>
-                  <Link href="/testimonials" className="hover:text-white">
-                    Testimonials
-                  </Link>
-                </li>
               </ul>
             </div>
             <div>
               <h3 className="font-bold text-lg mb-4">Resources</h3>
               <ul className="space-y-2 text-sm text-slate-400">
+
                 <li>
-                  <Link href="/blog" className="hover:text-white">
-                    Blog
+                  <Link href="/faqs" className="hover:text-white">FAQ</Link>
+                </li>
+
+                <li>
+                  <Link href="/contact" className="hover:text-white">
+                    Contact Us
                   </Link>
                 </li>
                 <li>
-                  <Link href="/faq" className="hover:text-white">
-                    FAQ
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/support" className="hover:text-white">
-                    Support
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/privacy" className="hover:text-white">
+
+                  <Link href="/privacy-policy" className="hover:text-white">
                     Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/terms-of-use" className="hover:text-white">
+                    Terms of Use
                   </Link>
                 </li>
               </ul>
@@ -888,10 +884,8 @@ export default function Home() {
             <div>
               <h3 className="font-bold text-lg mb-4">Contact</h3>
               <ul className="space-y-2 text-sm text-slate-400">
-                <li>1234 Exploration Ave</li>
-                <li>Houston, TX 77001</li>
                 <li>info@coretocrust.com</li>
-                <li>(555) 123-4567</li>
+                <li>(964) 750-6416103</li>
               </ul>
             </div>
           </div>
