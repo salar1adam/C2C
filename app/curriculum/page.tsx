@@ -27,7 +27,7 @@ export default function CurriculumPage() {
                 oil exploration skills — guided by real-world techniques and tools used in the industry.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-yellow-500 hover:bg-yellow-600 text-black">
+                <Button asChild className="bg-yellow-500 hover:bg-yellow-600 text-black">
                   <Link href="/enroll">Enroll Now</Link>
                 </Button>
                 <a
@@ -698,7 +698,7 @@ export default function CurriculumPage() {
                 <p className="text-slate-600 mb-4">
                   Secure your spot in our next cohort starting June 1, 2025. Limited seats available.
                 </p>
-                <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black">
+                <Button asChild className="w-full bg-yellow-500 hover:bg-yellow-600 text-black">
                   <Link href="/enroll">Enroll Now</Link>
                 </Button>
                 <p className="text-sm text-slate-500 mt-4 text-center">

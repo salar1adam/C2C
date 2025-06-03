@@ -32,10 +32,10 @@ export default function InstructorPage() {
               <p className="text-yellow-600 font-medium">Course Creator, Instructor, and Geoscience Educator</p>
 
               <div className="mt-6 space-y-4">
-                <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black">
+                <Button asChild className="w-full bg-yellow-500 hover:bg-yellow-600 text-black">
                   <Link href="/enroll">Enroll in Course</Link>
                 </Button>
-                <Button variant="outline" className="w-full">
+                <Button asChild variant="outline" className="w-full">
                   <Link href="/contact">Contact Salar</Link>
                 </Button>
               </div>
@@ -244,10 +244,10 @@ export default function InstructorPage() {
             experience, and industry connections.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black">
+            <Button asChild size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black">
               <Link href="/enroll">Enroll Now</Link>
             </Button>
-            <Button size="lg" variant="outline">
+            <Button asChild size="lg" variant="outline">
               <Link href="/curriculum">View Curriculum</Link>
             </Button>
           </div>

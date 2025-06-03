@@ -61,18 +61,19 @@ export default function Home() {
                   exploration.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black">
-                    <Link href="/enroll" className="flex items-center gap-2">
-                      Enroll Now <ChevronRight className="h-4 w-4" />
-                    </Link>
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-white text-black bg-white hover:bg-white/10 hover:text-white"
-                  >
-                    <Link href="#curriculum">View Curriculum</Link>
-                  </Button>
+                <Button asChild size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black">
+  <Link href="/enroll" className="flex items-center gap-2">
+    Enroll Now <ChevronRight className="h-4 w-4" />
+  </Link>
+</Button>
+<Button
+  asChild
+  size="lg"
+  variant="outline"
+  className="border-white text-black bg-white hover:bg-white/10 hover:text-white"
+>
+  <Link href="#curriculum">View Curriculum</Link>
+</Button>
                 </div>
                 <div className="flex items-center gap-4 text-sm">
                   <div className="flex items-center gap-1">
@@ -408,7 +409,7 @@ export default function Home() {
                   accessible, modern teaching. His mission with Core to Crust is to bridge that gap and empower the next
                   wave of oil exploration professionals.
                 </p>
-                <Button variant="outline" className="mt-4">
+                <Button asChild variant="outline" className="mt-4">
                   <Link href="/instructor">Full Biography</Link>
                 </Button>
               </div>
@@ -811,11 +812,11 @@ export default function Home() {
               Join the ranks of successful oil exploration professionals who started with our comprehensive course.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black">
+              <Button asChild size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black">
                 <Link href="/enroll">Enroll Now</Link>
               </Button>
               <Button
-                size="lg"
+               asChild size="lg"
                 variant="outline"
                 className="border-white text-black bg-white hover:bg-white/10 hover:text-white"
               >

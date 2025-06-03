@@ -156,7 +156,7 @@ export default function ContactPage() {
 
                 <div className="pt-4">
                   <Button variant="outline" asChild className="w-full">
-                    <Link href="/faq">View All FAQs</Link>
+                    <Link href="/faqs">View All FAQs</Link>
                   </Button>
                 </div>
               </div>
