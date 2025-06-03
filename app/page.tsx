@@ -649,9 +649,9 @@ export default function Home() {
                       <span>Exclusive learning resources and downloadable tools</span>
                     </li>
                   </ul>
-                  <Button className="w-full" variant="outline">
-                    <Link href="/enroll?plan=self-paced">Select Plan</Link>
-                  </Button>
+                  <Button asChild className="w-full" variant="outline">
+  <Link href="/enroll?plan=self-paced">Select Plan</Link>
+</Button>
                 </CardContent>
               </Card>
               <Card className="border-yellow-500 shadow-lg relative">
@@ -690,9 +690,9 @@ export default function Home() {
                       <span>Career support guidance and portfolio review</span>
                     </li>
                   </ul>
-                  <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black">
-                    <Link href="/enroll?plan=professional">Select Plan</Link>
-                  </Button>
+                  <Button asChild className="w-full bg-yellow-500 hover:bg-yellow-600 text-black">
+  <Link href="/enroll?plan=professional">Select Plan</Link>
+</Button>
                 </CardContent>
               </Card>
               <Card className="border-slate-200">
@@ -716,9 +716,9 @@ export default function Home() {
                       <span>Flexible delivery for teams of any size</span>
                     </li>
                   </ul>
-                  <Button className="w-full" variant="outline">
-                    <Link href="/contact?inquiry=corporate">Contact us for details</Link>
-                  </Button>
+                  <Button asChild className="w-full" variant="outline">
+  <Link href="/contact?inquiry=corporate">Contact us for details</Link>
+</Button>
                 </CardContent>
               </Card>
             </div>

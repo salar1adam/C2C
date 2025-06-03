@@ -23,7 +23,7 @@ export default function EnrollPage() {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="md:col-span-2">
             <div className="bg-white rounded-lg shadow-sm p-8">
-              <h1 className="text-3xl font-bold mb-6">Enroll in Core to Crust: Oil</h1>
+              <h1 className="text-3xl font-bold mb-6">Enroll in Core to Crust</h1>
               <p className="text-slate-600 mb-8">
                 Complete the form below to secure your spot in our comprehensive oil exploration course.
               </p>

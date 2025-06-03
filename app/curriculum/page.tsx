@@ -30,10 +30,35 @@ export default function CurriculumPage() {
                 <Button className="bg-yellow-500 hover:bg-yellow-600 text-black">
                   <Link href="/enroll">Enroll Now</Link>
                 </Button>
-                <Button variant="outline" className="gap-2">
-                  <Download className="h-4 w-4" />
-                  Download Full Syllabus
-                </Button>
+                <a
+  href="https://drive.google.com/uc?export=download&id=1lLgqMPnNXy6XRXuuB45lM5pU9ssq-G0D"
+  download="Full_Syllabus.pdf" // Suggests a filename to the user
+  target="_blank" // Opens in a new tab, good practice
+  rel="noopener noreferrer" // Security for target="_blank"
+  // Below are example Tailwind CSS classes to style it like an outline button.
+  // Adjust these to perfectly match your site's "Button variant='outline'" styling.
+  className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 gap-2"
+>
+  {/* This is a generic Download SVG icon. Replace with your <Download /> component if different. */}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="h-4 w-4" // Matches className from your screenshot
+  >
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+    <polyline points="7 10 12 15 17 10" />
+    <line x1="12" y1="15" x2="12" y2="3" />
+  </svg>
+  Download Full Syllabus
+</a>
+
               </div>
             </div>
             <div className="relative rounded-lg overflow-hidden pt-[66.67%]">
