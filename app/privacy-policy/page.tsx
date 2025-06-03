@@ -4,7 +4,7 @@ const PrivacyPolicyPage: React.FC = () => {
   return (
     <div className="container mx-auto py-12 px-4">
       <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
-      <p className="text-sm text-gray-500 mb-8">Effective Date: [Insert Date]</p>
+      <p className="text-sm text-gray-500 mb-8">Effective Date: [01/01/2025]</p>
 
       <p className="mb-4">
         At Core to Crust, we respect your privacy and are committed to protecting your personal information.

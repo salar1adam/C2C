@@ -76,14 +76,14 @@ export default function EnrollPage() {
                         <RadioGroupItem value="self-paced" id="self-paced" />
                         <Label htmlFor="self-paced" className="flex-1 cursor-pointer">
                           <div className="font-medium">Self-Paced</div>
-                          <div className="text-sm text-slate-500">$2,499 - Learn at your own pace</div>
+                          <div className="text-sm text-slate-500">$1,099 - Learn at your own pace</div>
                         </Label>
                       </div>
                       <div className="flex items-center space-x-2 border border-yellow-500 bg-yellow-50 p-4 rounded-md">
                         <RadioGroupItem value="professional" id="professional" />
                         <Label htmlFor="professional" className="flex-1 cursor-pointer">
                           <div className="font-medium">Professional</div>
-                          <div className="text-sm text-slate-500">$4,999 - Our most popular option</div>
+                          <div className="text-sm text-slate-500">$2,499 - Our most popular option</div>
                         </Label>
                       </div>
                       <div className="flex items-center space-x-2 border p-4 rounded-md">
@@ -91,7 +91,7 @@ export default function EnrollPage() {
                         <Label htmlFor="executive" className="flex-1 cursor-pointer">
                           <div className="font-medium">Executive</div>
                           <div className="text-sm text-slate-500">
-                            $7,999 - Premium experience with 1-on-1 mentoring
+                            $Custom Pricing - For Companies & Teams
                           </div>
                         </Label>
                       </div>
@@ -125,11 +125,11 @@ export default function EnrollPage() {
                   </Button>
                   <p className="text-sm text-slate-500 mt-4 text-center">
                     By enrolling, you agree to our{" "}
-                    <Link href="/terms" className="text-yellow-600 hover:underline">
+                    <Link href="/terms-of-use" className="text-yellow-600 hover:underline">
                       Terms of Service
                     </Link>{" "}
                     and{" "}
-                    <Link href="/privacy" className="text-yellow-600 hover:underline">
+                    <Link href="/privacy-policy" className="text-yellow-600 hover:underline">
                       Privacy Policy
                     </Link>
                     .
@@ -145,33 +145,33 @@ export default function EnrollPage() {
                 <h2 className="text-xl font-bold mb-4">Enrollment Summary</h2>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center pb-2 border-b">
+
                     <span className="font-medium">Professional Plan</span>
-                    <span className="font-bold">$4,999</span>
+                    <span className="font-bold">$2,499 (one-time payment)</span>
                   </div>
                   <div className="space-y-2">
                     <h3 className="font-medium">What's Included:</h3>
                     <ul className="space-y-1 text-sm text-slate-600">
-                      <li>• Full course access for 1 year</li>
-                      <li>• All video lectures and materials</li>
-                      <li>• Live weekly Q&A sessions</li>
-                      <li>• Graded assignments with feedback</li>
-                      <li>• Industry networking events</li>
-                      <li>• Job placement assistance</li>
-                      <li>• Course certificate</li>
+                      <li>• Lifetime access to the full course</li>
+                      <li>• All video lectures and materials & updates</li>
+                      <li>• Weekly live Q&A sessions with instructors</li>
+                      <li>• Graded assignments with personalized feedback</li>
+                      <li>• Invitations to exclusive networking sessions</li>
+                      <li>• Career development resources & job search support</li>
+                      <li>• Official certificate of completion</li>
                     </ul>
                   </div>
                   <div className="pt-4">
                     <div className="bg-yellow-100 p-4 rounded-md text-sm">
-                      <p className="font-medium text-yellow-800">Next cohort starts June 1, 2025</p>
+                      <p className="font-medium text-yellow-800">Next cohort starts June 10, 2025</p>
                       <p className="text-yellow-700 mt-1">Limited seats available. Secure yours today!</p>
                     </div>
                   </div>
                   <div className="pt-4">
                     <div className="bg-green-50 p-4 rounded-md text-sm border border-green-200">
-                      <p className="font-medium text-green-800">Our Satisfaction Guarantee</p>
+                      <p className="font-medium text-green-800">Our Commitment to Quality</p>
                       <p className="text-green-700 mt-1">
-                        If you're not completely satisfied after the first two weeks, we'll refund your full tuition—no
-                        questions asked.
+                        We're dedicated to delivering exceptional educational value. Our course is designed with industry best practices and expert guidance to ensure you receive the highest quality knowledge in oil industry.
                       </p>
                     </div>
                   </div>
@@ -189,7 +189,7 @@ export default function EnrollPage() {
                     <div className="flex items-center gap-2 text-sm">
                       <span className="font-medium">Phone:</span>
                       <a href="tel:+15551234567" className="text-yellow-600 hover:underline">
-                        (555) 123-4567
+                        (964) 7506416103
                       </a>
                     </div>
                   </div>
@@ -202,7 +202,7 @@ export default function EnrollPage() {
                 <CardContent className="pt-6">
                   <h3 className="font-medium mb-4">Graduate Success Stories</h3>
                   <div className="space-y-4">
-                    <div className="flex items-center gap-4 mb-4">git apply
+                    <div className="flex items-center gap-4 mb-4">
                       <div className="relative w-12 h-12 rounded-full overflow-hidden">
                         <Image src="/john.jpg" alt="John Davis" fill className="object-cover" />
                       </div>
@@ -218,8 +218,8 @@ export default function EnrollPage() {
                   </div>
                   <div className="mt-4 pt-4 border-t border-slate-100">
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="relative w-12 h-12 rounded-full overflow-hidden">git apply
-                        <Image src="/maria.jpg" alt="Maria Sanchez" fill className="object-cover" />
+                      <div className="relative w-12 h-12 rounded-full overflow-hidden">
+                        <Image src="/maria.png" alt="Maria Sanchez" fill className="object-cover" />
                       </div>
                       <div>
                         <h4 className="font-bold">Maria Sanchez</h4>
@@ -259,7 +259,7 @@ export default function EnrollPage() {
                       </svg>
                       <div>
                         <p className="text-sm font-medium">Return on Investment</p>
-                        <p className="text-xs text-slate-500">Average salary increase of $35,000 after completion</p>
+                        <p className="text-xs text-slate-500">Many graduates report salary gains — some up to $35,000/year.</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-2">
@@ -282,9 +282,7 @@ export default function EnrollPage() {
                       </svg>
                       <div>
                         <p className="text-sm font-medium">Industry Connections</p>
-                        <p className="text-xs text-slate-500">
-                          Direct access to hiring managers at 25+ partner companies
-                        </p>
+                        <p className="text-xs text-slate-500">Join events and get resources to connect with recruiters and experts.</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-2">
@@ -305,7 +303,7 @@ export default function EnrollPage() {
                       </svg>
                       <div>
                         <p className="text-sm font-medium">Career Acceleration</p>
-                        <p className="text-xs text-slate-500">85% of graduates report promotion within 18 months</p>
+                        <p className="text-xs text-slate-500">Graduates often land new roles or promotions within 12–18 months.</p>
                       </div>
                     </div>
                   </div>

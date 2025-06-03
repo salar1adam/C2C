@@ -112,12 +112,12 @@ export default function Home() {
                 <p className="text-sm text-slate-600 mt-2">Student Satisfaction Rate</p>
               </div>
               <div className="text-center">
-                <p className="text-3xl md:text-4xl font-bold text-yellow-500">25+</p>
-                <p className="text-sm text-slate-600 mt-2">Learning Modules</p>
+                <p className="text-3xl md:text-4xl font-bold text-yellow-500">5+</p>
+                <p className="text-sm text-slate-600 mt-2">Expertly curated modules</p>
               </div>
               <div className="text-center">
-                <p className="text-3xl md:text-4xl font-bold text-yellow-500">1,200+</p>
-                <p className="text-sm text-slate-600 mt-2">Learners Enrolled</p>
+                <p className="text-3xl md:text-4xl font-bold text-yellow-500">120+</p>
+                <p className="text-sm text-slate-600 mt-2"> Professionals trained so far</p>
               </div>
               <div className="text-center">
                 <p className="text-3xl md:text-4xl font-bold text-yellow-500">$95K*</p>
@@ -364,7 +364,7 @@ export default function Home() {
         <section id="instructor" className="py-20">
           <div className="container px-6 md:px-8 max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="relative h-[400px] rounded-lg overflow-hidden">
+              <div className="relative h-[600px] rounded-lg overflow-hidden">
                 <Image
  src="/IMG_5500.PNG"
  alt="Salar Mousa Adam teaching"
@@ -448,7 +448,7 @@ export default function Home() {
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                      <Image src="/michael.jpg" alt="Michael Chen" fill className="object-cover" />
+                      <Image src="/mechael.jpg" alt="Michael Chen" fill className="object-cover" />
                     </div>
                     <div>
                       <h4 className="font-bold">Michael Chen</h4>

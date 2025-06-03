@@ -227,7 +227,7 @@ export default function InstructorPage() {
 
             <div className="relative h-[300px] rounded-lg overflow-hidden">
               <Image
-                src="/placeholder.svg?height=300&width=300"
+                src="/IMG_7130.JPG"
                 alt="Salar teaching in the field"
                 fill
                 className="object-cover"
