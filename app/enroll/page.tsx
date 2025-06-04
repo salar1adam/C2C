@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link"
 import Image from "next/image"
 import { ChevronLeft } from "lucide-react"
@@ -8,6 +10,7 @@ import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Textarea } from "@/components/ui/textarea"
 
+import { addSubmissionToFirestore } from "../src/utils/firebase"
 export default function EnrollPage() {
   return (
     <div className="min-h-screen bg-slate-50">
@@ -28,26 +31,54 @@ export default function EnrollPage() {
                 Complete the form below to secure your spot in our comprehensive oil exploration course.
               </p>
 
-              <form className="space-y-6">
+              <form
+                className="space-y-6"
+                onSubmit={async (e) => {
+                  e.preventDefault()
+
+                  const formData = new FormData(e.currentTarget)
+                  const submissionData: { [key: string]: any } = {}
+
+                  formData.forEach((value, key) => {
+                    submissionData[key] = value
+                  })
+
+                  try {
+                    console.log("Data being sent to Firestore:", submissionData);
+                    await addSubmissionToFirestore(
+                      "enrollment-submissions",
+                      submissionData
+                    )
+                    alert("Enrollment submitted successfully!") // Or display a more sophisticated success message
+                    // Optionally, reset the form
+                    // e.currentTarget.reset();
+                  } catch (error) {
+                    console.error("Error submitting enrollment:", error)
+                    alert(
+                      "There was an error submitting your enrollment. Please try again."
+                    ) // Or display an error message
+                  }
+                }}
+              >
                 <div className="space-y-4">
                   <h2 className="text-xl font-semibold">Personal Information</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="first-name">First Name</Label>
-                      <Input id="first-name" placeholder="Enter your first name" />
+                      <Input id="first-name" name="first-name" placeholder="Enter your first name" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="last-name">Last Name</Label>
-                      <Input id="last-name" placeholder="Enter your last name" />
+                      <Input id="last-name" name="last-name" placeholder="Enter your last name" />
                     </div>
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email Address</Label>
-                    <Input id="email" type="email" placeholder="Enter your email address" />
+                    <Input id="email" name="email" type="email" placeholder="Enter your email address" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="phone">Phone Number</Label>
-                    <Input id="phone" placeholder="Enter your phone number" />
+                    <Input id="phone" name="phone" placeholder="Enter your phone number" />
                   </div>
                 </div>
 
@@ -55,15 +86,15 @@ export default function EnrollPage() {
                   <h2 className="text-xl font-semibold">Professional Background</h2>
                   <div className="space-y-2">
                     <Label htmlFor="company">Current Company/Organization</Label>
-                    <Input id="company" placeholder="Enter your company name" />
+                    <Input id="company" name="company" placeholder="Enter your company name" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="job-title">Job Title</Label>
-                    <Input id="job-title" placeholder="Enter your job title" />
+                    <Input id="job-title" name="job-title" placeholder="Enter your job title" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="experience">Years of Experience in Related Fields</Label>
-                    <Input id="experience" type="number" placeholder="Enter years of experience" />
+                    <Input id="experience" name="experience" type="number" placeholder="Enter years of experience" />
                   </div>
                 </div>
 
@@ -71,11 +102,11 @@ export default function EnrollPage() {
                   <h2 className="text-xl font-semibold">Course Selection</h2>
                   <div className="space-y-3">
                     <Label>Select Your Preferred Plan</Label>
-                    <RadioGroup defaultValue="professional">
+                    <RadioGroup defaultValue="professional" name="plan">
                       <div className="flex items-center space-x-2 border p-4 rounded-md">
                         <RadioGroupItem value="self-paced" id="self-paced" />
                         <Label htmlFor="self-paced" className="flex-1 cursor-pointer">
-                          <div className="font-medium">Self-Paced</div>
+                          <div className="font-medium">Self-Paced Plan</div>
                           <div className="text-sm text-slate-500">$1,099 - Learn at your own pace</div>
                         </Label>
                       </div>
@@ -83,7 +114,7 @@ export default function EnrollPage() {
                         <RadioGroupItem value="professional" id="professional" />
                         <Label htmlFor="professional" className="flex-1 cursor-pointer">
                           <div className="font-medium">Professional</div>
-                          <div className="text-sm text-slate-500">$2,499 - Our most popular option</div>
+                          <div className="text-sm text-slate-500">$2,499 (most popular)</div>
                         </Label>
                       </div>
                       <div className="flex items-center space-x-2 border p-4 rounded-md">
@@ -98,8 +129,8 @@ export default function EnrollPage() {
                     </RadioGroup>
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="start-date">Preferred Start Date</Label>
-                    <Input id="start-date" type="date" />
+                    <Label htmlFor="preferred-start-date">Preferred Start Date</Label>
+                    <Input id="preferred-start-date" name="preferred-start-date" type="date" />
                   </div>
                 </div>
 
@@ -110,12 +141,13 @@ export default function EnrollPage() {
                     <Textarea
                       id="goals"
                       placeholder="Please share your goals and what you hope to achieve..."
+                      name="goals"
                       className="min-h-[100px]"
                     />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="referral">How did you hear about us?</Label>
-                    <Input id="referral" placeholder="Google, colleague, social media, etc." />
+                    <Input id="referral" name="referral" placeholder="Google, colleague, social media, etc." />
                   </div>
                 </div>
 

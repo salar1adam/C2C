@@ -1,12 +1,38 @@
+'use client';
+
 import Link from "next/link"
 import { ChevronLeft, Mail, Phone, MapPin, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { addSubmissionToFirestore } from "../src/utils/firebase";
 
 export default function ContactPage() {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const submissionData = {
+      firstName: formData.get('first-name'),
+      lastName: formData.get('last-name'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      inquiryType: formData.get('inquiry-type'),
+      message: formData.get('message'),
+      timestamp: new Date(), // Optional: Add a timestamp
+    };
+
+    try {
+      await addSubmissionToFirestore("inquiries", submissionData);
+      alert("Message sent successfully!"); // Or display a more sophisticated success message
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("Failed to send message. Please try again."); // Or display an error message
+    }
+  };
+
   return (
     <div className="min-h-screen bg-slate-50">
       <div className="container py-8 px-6 md:px-8 max-w-7xl mx-auto">
@@ -26,29 +52,29 @@ export default function ContactPage() {
               you shortly.
             </p>
 
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="first-name">First Name</Label>
-                    <Input id="first-name" placeholder="Enter your first name" />
+                    <Input id="first-name" name="first-name" placeholder="Enter your first name" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="last-name">Last Name</Label>
-                    <Input id="last-name" placeholder="Enter your last name" />
+                    <Input id="last-name" name="last-name" placeholder="Enter your last name" />
                   </div>
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email">Email Address</Label>
-                  <Input id="email" type="email" placeholder="Enter your email address" />
+                  <Input id="email" name="email" type="email" placeholder="Enter your email address" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="phone">Phone Number</Label>
-                  <Input id="phone" placeholder="Enter your phone number" />
+                  <Input id="phone" name="phone" placeholder="Enter your phone number" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="inquiry-type">Inquiry Type</Label>
-                  <Select>
+                  <Select name="inquiry-type">
                     <SelectTrigger id="inquiry-type">
                       <SelectValue placeholder="Select inquiry type" />
                     </SelectTrigger>
@@ -64,6 +90,7 @@ export default function ContactPage() {
                 <div className="space-y-2">
                   <Label htmlFor="message">Message</Label>
                   <Textarea
+                    name="message"
                     id="message"
                     placeholder="Please provide details about your inquiry..."
                     className="min-h-[150px]"
