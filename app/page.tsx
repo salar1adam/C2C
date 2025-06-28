@@ -176,7 +176,7 @@ export default function Home() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       className="text-black ml-1"
-                    >
+                    > comment for commit change
                       <polygon points="5 3 19 12 5 21 5 3"></polygon>
                     </svg>
                   </div>
