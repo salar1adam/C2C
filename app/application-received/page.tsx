@@ -1,8 +1,18 @@
 "use client";
 
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 
 export default function ApplicationReceivedPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ApplicationReceivedContent />
+    </Suspense>
+  );
+}
+
+// Create a new component to hold the page content that uses useSearchParams
+function ApplicationReceivedContent() {
   const searchParams = useSearchParams();
   const name = searchParams.get('name');
 
