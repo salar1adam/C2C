@@ -49,7 +49,13 @@ export default function EnrollPage() {
                       "enrollment-submissions",
                       submissionData
                     )
-                    alert("Enrollment submitted successfully!") // Or display a more sophisticated success message
+                    // Get the user's first name from the form data
+const firstName = formData.get('first-name'); // Assuming 'first-name' is the name of the input field
+
+// Redirect to the application received page
+// Using window.location.href for simplicity, but useRouter is recommended for Next.js
+window.location.href = `/application-received${firstName ? `?name=${firstName}` : ''}`;
+
                     // Optionally, reset the form
                     // e.currentTarget.reset();
                   } catch (error) {
